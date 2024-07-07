@@ -45,6 +45,24 @@ class OLController extends Controller
 
             $data = json_decode($response, true);
 
+            // Ottieni l'ID dell'utente corrente
+            $user = session('username'); 
+            $userId = Utente::where('username', $user)->value('id');
+
+            if ($userId) {
+                // Controlla quali libri sono già salvati dall'utente
+                $savedBooks = OLSalvato::where('id_user', $userId)
+                                ->whereIn('title', array_column($data['docs'], 'title_suggest'))
+                                ->pluck('title')
+                                ->toArray();
+
+                // Aggiungi informazione di salvataggio ai risultati
+                foreach ($data['docs'] as &$book) {
+                    $book['is_saved'] = in_array($book['title_suggest'], $savedBooks);
+                }
+            }
+
+
             return response()->json($data);
         } else {
             return response()->json(['error' => 'Search query is required']);
