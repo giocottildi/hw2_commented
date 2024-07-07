@@ -1,4 +1,4 @@
-<!-- resources/views/menu.blade.php -->
+
 
 <!DOCTYPE html>
 <html>
@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>Sherlock Collection</title>
-    <link rel="stylesheet" href="{{ asset('css/menu.css') }}"> <!-- Assicurati che il percorso sia corretto -->
-    <script src="{{ asset('js/menu.js') }}" defer></script> <!-- Assicurati che il percorso sia corretto -->
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}"> 
+    <script src="{{ asset('js/menu.js') }}" defer></script> 
 </head>
 <body>
     <header>
