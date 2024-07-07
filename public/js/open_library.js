@@ -6,7 +6,8 @@ document.getElementById('search-form').addEventListener('submit', fetchSearch);
 function fetchSearch(event) {
     event.preventDefault();
     const searchQuery = document.getElementById('search-input').value;
-    fetch(`/ricercaOL?search=${encodeURIComponent(searchQuery)}`)
+    // fetch(`/ricercaOL?search=${encodeURIComponent(searchQuery)}`)
+    fetch("/ricercaOL?search="+encodeURIComponent(searchQuery))
         .then(response => response.json())
         .then(onJson, erroreFetch); 
 }
