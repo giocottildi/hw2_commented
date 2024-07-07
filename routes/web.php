@@ -11,21 +11,29 @@ use App\Http\Controllers\GutenbergController;
 use App\Http\Controllers\FaqController;
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Home route
+
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
-// GUTENBERG
+
+Route::get('/titoli-libri', [HomeController::class, 'getTitoliLibri']);
+
+
 Route::get('/gutenberg', [GutenbergController::class, 'gutenberg'])->name('gutenberg');
 Route::get('/gutenberg/search', [GutenbergController::class, 'search'])->name('gutenberg.search');
 
 
+Route::get('/faq', [FaqController::class, 'index']);
 
-// Authentication routes
+
+Route::get('/random-quote', [QuoteController::class, 'getRandomQuote']);
+
+
+
+
 Route::get('/login', 'App\Http\Controllers\LoginController@login')->name('login');
 Route::post('/login', 'App\Http\Controllers\LoginController@do_login');
+
+
 Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');
 
 
@@ -34,34 +42,20 @@ Route::post('/register', 'App\Http\Controllers\LoginController@do_signup');
 
 Route::get('signup/check/{field}', 'App\Http\Controllers\LoginController@check');
 
-Route::get('/random-quote', [QuoteController::class, 'getRandomQuote']);
-
-
-Route::get('/titoli-libri', [HomeController::class, 'getTitoliLibri']);
-// Route::get('/drop-titoli-libri', [HomeController::class, 'dropTitoliLibriRecords']);
-
-Route::get('/faq', [FaqController::class, 'index']);
 
 
 
-// Spotify
+
+Route::get('/crea-lista', [CreaListaController::class, 'index'])->name('creaLista');
+
+Route::get('/get-titoli-libri', [CreaListaController::class, 'getTitoliLibri']);
+Route::post('/query-lista-libri', [CreaListaController::class, 'queryListaLibri']);
+Route::post('/gestione-lista-libri', [CreaListaController::class, 'gestioneListaLibri']);
+Route::get('/load-liste', [CreaListaController::class, 'loadListe']);
+Route::get('/view-valori-lista', [CreaListaController::class, 'viewValoriLista']);
 
 
-Route::get('/spotify', 'App\Http\Controllers\SpotifyController@index')->name('spotify');;
 
-Route::post('/getPlaylist', [SpotifyController::class, 'getPlaylist']);
-Route::post('/prendiCronologia', [SpotifyController::class, 'prendiCronologia']);
-Route::post('/addCronologia', [SpotifyController::class, 'addCronologia']);
-Route::get('/deleteCronologia', [SpotifyController::class, 'deleteCronologia']);
-
-
-// Route::post('/caricaLaCronologia', 'App\Http\Controllers\SpotifyController@caricaLaCronologia');
-// // Route::get('caricaLaCronologia', 'App\Http\Controllers\SpotifyController@caricaLaCronologia');
-// Route::get('/eliminaLaCronologia', 'App\Http\Controllers\SpotifyController@eliminaLaCronologia');
-// Route::post('/getPlaylistAggiungiCronologia', 'App\Http\Controllers\SpotifyController@getPlaylistAggiungiCronologia');
-
-
-//OPEN LIBRARY PAGES
 
 Route::get('/OL_search', [OLController::class, 'index'])->name('page_ricerca_OL');
 Route::get('/ricercaOL', [OLController::class, 'ricercaOL']);
@@ -73,12 +67,12 @@ Route::get('/select-save-book', [OLController::class, 'selectSaveBook']);
 Route::get('/OL_salvati', [OLController::class, 'indexSave'])->name('page_OL_salvati');
 
 
-// CREA LISTA
 
-Route::get('/crea-lista', [CreaListaController::class, 'index'])->name('creaLista');
 
-Route::get('/get-titoli-libri', [CreaListaController::class, 'getTitoliLibri']);
-Route::post('/query-lista-libri', [CreaListaController::class, 'queryListaLibri']);
-Route::post('/gestione-lista-libri', [CreaListaController::class, 'gestioneListaLibri']);
-Route::get('/load-liste', [CreaListaController::class, 'loadListe']);
-Route::get('/view-valori-lista', [CreaListaController::class, 'viewValoriLista']);
+Route::get('/spotify', 'App\Http\Controllers\SpotifyController@index')->name('spotify');;
+
+Route::post('/getPlaylist', [SpotifyController::class, 'getPlaylist']);
+Route::post('/prendiCronologia', [SpotifyController::class, 'prendiCronologia']);
+Route::post('/addCronologia', [SpotifyController::class, 'addCronologia']);
+Route::get('/deleteCronologia', [SpotifyController::class, 'deleteCronologia']);
+
