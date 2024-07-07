@@ -1,0 +1,57 @@
+#Gutenberg-ricerca {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 20px 0;
+    background-color: #f0f0f0; /* Colore di sfondo */
+}
+#Gutenberg {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+select, input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#elenco-view {
+    text-align: left;
+}
+
+.book {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.book p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #666;
+}

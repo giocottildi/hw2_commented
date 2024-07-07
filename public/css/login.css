@@ -1,0 +1,112 @@
+#login
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('/img/sfondo3.jpg');
+    background-size: cover;
+    min-height: 50vw;
+}
+
+@media(max-width:500px)
+{
+  #login{
+    min-height: 100vw;
+  }
+  #log-account{
+    width: 70%!important;
+    margin: 50px;
+  }
+  #accedi-account #log-in .submit{
+    width: 50%!important;
+  }
+}
+#log-account
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(3, 85, 115, 0.8);
+    width: 35%;
+    height: 450px;
+    border-style: outset;
+    border-color: blue;
+    border-radius: 10px;
+    z-index: 2;
+    
+}
+#log-account h1
+{
+    text-align: center;
+}
+#accedi-account
+  {
+      display: flex;
+      width: 100%;
+      
+  }
+#log-in
+  {
+      width: 100%;
+  }
+  
+#accedi-account #log-in label
+  {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 10px 5px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      
+  }
+    
+#accedi-account #log-in input
+  {
+      margin-left: 0.5em;
+      margin-right: 10px;
+      padding: 10px;
+      background-color: rgb(89, 87, 86);
+      width: 60%;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 15px;
+  }
+#accedi-account #log-in .submit
+  {
+      width: 25%;
+  }
+  #links
+  {
+    margin-right: 10px;
+    text-align: right;
+    padding: 5px;  
+  }
+  #links a{
+    
+    color: aliceblue;
+  }
+#links a:visited
+{
+  color: aliceblue;
+}
+
+
+
+.hidden
+{
+    display: none;
+}
+
+.error{
+  display: block;
+  background-color: #e22134;
+  padding: 14px 14px 12px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+  width: 100%;
+}

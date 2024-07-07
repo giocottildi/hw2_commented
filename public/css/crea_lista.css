@@ -1,0 +1,217 @@
+#page-lista
+{
+    
+    background-image: url(/img/background_lista.jpg); 
+    background-size: cover;
+}
+
+#titolo
+{
+    font-size: 35px;
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+
+#lista-form
+{
+    margin-top: 35px;
+    /*background-color: #6083ff44;*/
+}
+.lista
+{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.flex-campo
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(0, 0, 92);
+    font-weight: bold;
+    font-size: 20px;
+}
+.flex-campo .campi-uscita
+{
+    text-align: center;
+}
+.flex-campo .campi-uscita-titolo
+{
+    width: 25%;
+}
+  
+.lista .titolo-uscita 
+{
+    width: 25%;
+    
+}
+
+.lista .uscita-opzioni 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+ 
+}
+#submit-lista
+{
+    margin-left: 85%;
+    margin-top: 105px;
+    margin-bottom: 170px;
+    border: 0px;
+    font-size: 15px;
+    height: 50px;
+    width: 12%;
+}
+@media(max-width: 500px)
+{
+    #submit-lista{
+        width: 30%!important;
+    }
+}
+.hidden
+{
+    display: none;
+}
+#tripla-lista
+{
+    background-color: aquamarine;
+}
+#triplo-flex
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+@media(max-width: 500px)
+{
+    #libri-letti, #libri-non-letti, #libri-non-ricordo
+    {
+        width: 85%!important;
+    }
+
+    #triplo-flex{
+        flex-direction: column;
+    }
+}
+#libri-letti
+{
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    background-image: url(/img/libri_letti.jpg);
+    background-size: cover;
+    font-weight: 200;
+    width: 28%;
+    height: 500px;
+}
+#libri-non-letti
+{
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    background-image: url(/img/libri_non_letti.jpg);
+    background-size: cover;
+    font-weight: 200;
+    width: 28%;
+    height: 500px;
+}
+#libri-non-ricordo
+{
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    background-image: url(/img/sherlock_things4.jpeg);
+    background-size: cover;
+    font-weight: 200;
+    width: 28%;
+    height: 500px;
+}
+.info-lista
+{
+    text-align: center;
+}
+#libri-letti p, #libri-non-letti p, #libri-da-leggere p
+{
+    margin-left: 10%;
+}
+#error
+{
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 65%;
+    margin-top: -150px;
+}
+
+
+/*TABELLA LISTE UTENTE*/
+
+#tabella table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#tabella th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+#tabella th {
+    background-color: #f2f2f2;
+}
+#tabella button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#tabella .dettagli-lista {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+/*LABEL PER IL NOME IN INPUT*/
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+#label-nome-lista{
+    display: inline-block;
+    width: 100px; /* larghezza fissa per allineare il testo a sinistra */
+    margin-bottom: 5px;
+    color: red;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+input[type="text"] {
+    width: calc(100% - 110px); /* larghezza calcolata per l'input, considerando il padding del label */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
