@@ -42,8 +42,8 @@ function onJson(data) {
             title.addEventListener('click', () => openModal(book.title_suggest, `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`, book.author_name ? book.author_name.join(', ') : 'Non disponibile', book.first_publish_year || 'Non disponibile')); // Evento di click sul titolo
             bookDiv.appendChild(title);
 
-            // Immagine per il salvataggio
-            const saveImgUrl = '/img/save.png';
+            // Imposta l'immagine corretta (save/saved) in base a book.is_saved
+            const saveImgUrl = book.is_saved ? '/img/saved.png' : '/img/save.png';
             const saveImg = document.createElement('img');
             saveImg.classList.add('img-salva');
             saveImg.id = `save-img-${index}`;
